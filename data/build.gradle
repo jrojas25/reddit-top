@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library'
+apply from: "$rootProject.projectDir/shared-gradle.gradle"
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(":domain")
+
+    //Security
+    implementation defaultDeps.androidx.security
+    implementation defaultDeps.androidx.corektx
+}
